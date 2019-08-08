@@ -10,11 +10,11 @@ gone2.1 shows the Single ghost particle method, with discharge for 10 seconds of
 
 Both codes are currently set up to run an animation that plots as the code runs. This also shows you the model time as the animation goes along.
 
-base2 can be used to model the variable spacing and single ghost particle methods
+base2 in flow_model2 can be used to model the variable spacing and single ghost particle methods
 Change input method: line 62
 Change discharge time: line 9
 Change model run time: line 47
 
-base3 can be used to run the model with the buffer zone input method
+base3 in flow_model3 can be used to run the model with the buffer zone input method
 Change discharge time: line 7
 Change model run time: line 48
