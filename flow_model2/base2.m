@@ -6,7 +6,7 @@ close all
 global h_0 n B Q dtp l vi a
 %Set variables
 h_0=2; %height at the boundary
-n=200; %number of particles
+n=100; %number of particles
 B=4; %Smoothing constant
 Q=10; %Instantaneous discharge
 dtp=0.1; %Time between particles being added
@@ -44,7 +44,7 @@ vaout=[];
 uout=[];
 tout=[];
 
-while t<=25
+while t<=15
 %Add particle if t is at a certain point
     try
     if t>=tpa(1)
@@ -55,11 +55,11 @@ while t<=25
         % remove first item in tpa
         tpa=tpa(2:end);
     end
-%................................................................change ghost settings here
+%................................................................change ghost particle settings here
 %................................................................
 %................................................................
 %Find heights and gradients at particles 
-    [pg1, vg1] = gmany(p,v); %find ghost particles
+    [pg1, vg1] = gmany(p,v); %find ghost particles........gmany() for variable spacing, gone() for single ghost particle
     pall1=[pg1,p(~isnan(p))];
     vall1=[vg1,v(~isnan(p))];
 
@@ -106,8 +106,8 @@ end
 %plotflow(pall1,p,vall1,u,t)
 
 %(optional) show animation
-%plot_animate(paout,vaout,uout,tout)
+plot_animate(paout,vaout,uout,tout)
 %tplot=[0.5,4.5,8,10];
 %pull2(paout,vaout,uout,tout,tplot)
 
-saveanimate2('gmany2.1.gif',paout,vaout,uout)
+%saveanimate2('gmany2.1.gif',paout,vaout,uout)

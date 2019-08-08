@@ -96,10 +96,10 @@ end
 %% plotting section
 
 %plotflow3(p,v,u,t)
-%plotanimate3(pout,vout,uout,tout)
+plotanimate3(pout,vout,uout,tout)
 
 %tplot=[1,4.7,5.9,7,9,12,14.9];
 %pull_figures(pout,vout,uout,tout,tplot);
 
-filename='buffer1.1.gif';
-saveanimate(filename,pout,vout,uout)
+%filename='buffer1.1.gif';
+%saveanimate(filename,pout,vout,uout)
